@@ -291,7 +291,8 @@ def adfgvx_de(Val,key):
 	
 
 if __name__ == '__main__':
-	title ='''
+	try:
+		title ='''
 	             _            _
 	 _   _ _ __ | | ___   ___| | __
 	| | | | '_ \| |/ _ \ / __| |/ /
@@ -300,150 +301,153 @@ if __name__ == '__main__':
 
 			Author By Arice
 '''                                                                
-	if str.lower(sys.argv[1]) == '-h':
-		cprint('\t'+title,'magenta')
-		cprint('\tUsage:','magenta')
-		cprint('\t[*]-h 	是查看都有哪些命令，以及使用方法','magenta')
-		cprint('\t[*]------------编码---------------[*]','magenta')
-		cprint('\t[*]-urlen 	对后面的参数进行URl编码','magenta')
-		cprint('\t[*]-urlde 	对后面的参数进行URL解码','magenta')
-		cprint('\t[*]-b64en 	对后面的参数进行base64编码','magenta')
-		cprint('\t[*]-b64de 	对后面的参数进行base64解码','magenta')
-		cprint('\t[*]-china_six 	对后面的参数进行汉字转十六进制','magenta')
-		cprint('\t[*]-six_china 	对后面的参数进行十六进制转汉字','magenta')
-		cprint('\t[*]-char_six	对后面的参数进行字符串转十六进制','magenta')
-		cprint('\t[*]-six_char	对后面的参数进行十六进制转字符串','magenta')
-		cprint('\t[*]-un_china 	对后面的参数进行Unicode转汉字','magenta')
-		cprint('\t[*]-china_un 	对后面的参数进行汉字转Unicode','magenta')
-		cprint('\t[*]-html_de 	对后面的参数进行html实体解码','magenta')
-		cprint('\t[*]-html_en 	对后面的参数进行html实体编码','magenta')
-		cprint('\t[*]-----------------加解密----------------[*]','magenta')
-		cprint('\t[*]-caser_en 	对后面的参数进行凯撒加密','magenta')
-		cprint('\t[*]-caser_de 	对后面的参数进行凯撒解密','magenta')
-		cprint('\t[*]-md5 	对后面的参数进行md5加密','magenta')
-		cprint('\t[*]-fence 	对后面的参数进行栅栏密码解密','magenta')
-		cprint('\t[*]-mose 	对后面的参数进行摩斯电码解密(可采用，！@＃进行分割)','magenta')
-		cprint('\t[*]-atbash 	对后面的参数进行埃特巴什码转换','magenta')
-		cprint('\t[*]-vigener 	对后面的参数进行维尔吉尼亚密码解密','magenta')
-		cprint('\t[*]-vigener_en 	对后面的参数进行维尔吉尼亚密码加密','magenta')
-		cprint('\t[*]-bacon_en 	对后面的参数进行培根密码加密','magenta')
-		cprint('\t[*]-bacon_de 	对后面的参数进行培根密码解密','magenta')
-		cprint('\t[*]-adfgx_en 	对后面的参数进行ADFGX密码加密','magenta')
-		cprint('\t[*]-adfgx_de 	对后面的参数进行ADFGX密码解密','magenta')
-		cprint('\t[*]-adfgvx_en 	对后面的参数进行ADFGVX密码加密','magenta')
-		cprint('\t[*]-adfgvx_de 	对后面的参数进行ADFGVX密码解密','magenta')
-		cprint('\t[*]----------------Example---------------[*]','magenta')
-		cprint('\t[*]字符串转十六进制：python unlock.py -char_six \'<?php phpinfo();?>\'','magenta')
-		cprint('\t[*]凯撒密码：python coding.py -caser_en abcd(明文) 3(偏移量)','magenta')
-		cprint('\t[*]维吉尼亚：python coding.py -vigener abcd(密文) aaaa(密钥)','magenta')
-		cprint('\t[*]维吉尼亚：python coding.py -vigener_en abcd(明文) aaaa(密钥)','magenta')
-		cprint('\t[*]培根密码解密：python coding.py -bacon_de aaaaaaaaabaaaba(不用带空格)','magenta')
-		cprint('\t[*]ADFGX加解密：python coding.py -adfgx_de \'aaa(明文或密文)\' \'aaa(密钥)\'','magenta')
+		if str.lower(sys.argv[1]) == '-h':
+			cprint('\t'+title,'magenta')
+			cprint('\tUsage:','magenta')
+			cprint('\t[*]-h 	是查看都有哪些命令，以及使用方法','magenta')
+			cprint('\t[*]------------编码---------------[*]','magenta')
+			cprint('\t[*]-urlen 	对后面的参数进行URl编码','magenta')
+			cprint('\t[*]-urlde 	对后面的参数进行URL解码','magenta')
+			cprint('\t[*]-b64en 	对后面的参数进行base64编码','magenta')
+			cprint('\t[*]-b64de 	对后面的参数进行base64解码','magenta')
+			cprint('\t[*]-china_six 	对后面的参数进行汉字转十六进制','magenta')
+			cprint('\t[*]-six_china 	对后面的参数进行十六进制转汉字','magenta')
+			cprint('\t[*]-char_six	对后面的参数进行字符串转十六进制','magenta')
+			cprint('\t[*]-six_char	对后面的参数进行十六进制转字符串','magenta')
+			cprint('\t[*]-un_china 	对后面的参数进行Unicode转汉字','magenta')
+			cprint('\t[*]-china_un 	对后面的参数进行汉字转Unicode','magenta')
+			cprint('\t[*]-html_de 	对后面的参数进行html实体解码','magenta')
+			cprint('\t[*]-html_en 	对后面的参数进行html实体编码','magenta')
+			cprint('\t[*]-----------------加解密----------------[*]','magenta')
+			cprint('\t[*]-caser_en 	对后面的参数进行凯撒加密','magenta')
+			cprint('\t[*]-caser_de 	对后面的参数进行凯撒解密','magenta')
+			cprint('\t[*]-md5 	对后面的参数进行md5加密','magenta')
+			cprint('\t[*]-fence 	对后面的参数进行栅栏密码解密','magenta')
+			cprint('\t[*]-mose 	对后面的参数进行摩斯电码解密(可采用，！@＃进行分割)','magenta')
+			cprint('\t[*]-atbash 	对后面的参数进行埃特巴什码转换','magenta')
+			cprint('\t[*]-vigener 	对后面的参数进行维尔吉尼亚密码解密','magenta')
+			cprint('\t[*]-vigener_en 	对后面的参数进行维尔吉尼亚密码加密','magenta')
+			cprint('\t[*]-bacon_en 	对后面的参数进行培根密码加密','magenta')
+			cprint('\t[*]-bacon_de 	对后面的参数进行培根密码解密','magenta')
+			cprint('\t[*]-adfgx_en 	对后面的参数进行ADFGX密码加密','magenta')
+			cprint('\t[*]-adfgx_de 	对后面的参数进行ADFGX密码解密','magenta')
+			cprint('\t[*]-adfgvx_en 	对后面的参数进行ADFGVX密码加密','magenta')
+			cprint('\t[*]-adfgvx_de 	对后面的参数进行ADFGVX密码解密','magenta')
+			cprint('\t[*]----------------Example---------------[*]','magenta')
+			cprint('\t[*]字符串转十六进制：python unlock.py -char_six \'<?php phpinfo();?>\'','magenta')
+			cprint('\t[*]凯撒密码：python coding.py -caser_en abcd(明文) 3(偏移量)','magenta')
+			cprint('\t[*]维吉尼亚：python coding.py -vigener abcd(密文) aaaa(密钥)','magenta')
+			cprint('\t[*]维吉尼亚：python coding.py -vigener_en abcd(明文) aaaa(密钥)','magenta')
+			cprint('\t[*]培根密码解密：python coding.py -bacon_de aaaaaaaaabaaaba(不用带空格)','magenta')
+			cprint('\t[*]ADFGX加解密：python coding.py -adfgx_de \'aaa(明文或密文)\' \'aaa(密钥)\'','magenta')
 
-	elif str.lower(sys.argv[1]) == '-urlen':
-		urlcode(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-urlen':
+			urlcode(sys.argv[2])
 
-	elif str.lower(sys.argv[1]) == '-urlde':
-		urldecode(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-urlde':
+			urldecode(sys.argv[2])
 
-	elif str.lower(sys.argv[1]) == '-md5':
-		cmd5(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-md5':
+			cmd5(sys.argv[2])
 
-	elif str.lower(sys.argv[1]) == '-b64en':
-		b64encode(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-b64en':
+			b64encode(sys.argv[2])
 
-	elif str.lower(sys.argv[1]) == '-b64de':
-		b64decode(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-b64de':
+			b64decode(sys.argv[2])
 
-	elif str.lower(sys.argv[1]) == '-six_china':
-		six_china(sys.argv[2])
-	elif str.lower(sys.argv[1]) == '-china_six':
-		china_six(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-six_china':
+			six_china(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-china_six':
+			china_six(sys.argv[2])
 
-	elif str.lower(sys.argv[1]) == '-char_six':
-		char_six(sys.argv[2])
-	elif str.lower(sys.argv[1]) == '-six_char':
-		six_char(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-char_six':
+			char_six(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-six_char':
+			six_char(sys.argv[2])
 
-	elif str.lower(sys.argv[1]) == '-html_de':
-		html_de(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-html_de':
+			html_de(sys.argv[2])
 
-	elif str.lower(sys.argv[1]) == '-html_en':
-		html_en(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-html_en':
+			html_en(sys.argv[2])
 
-	elif str.lower(sys.argv[1]) == '-un_china':
-		unicode_china(sys.argv[2])
-	elif str.lower(sys.argv[1]) == '-china_un':
-		china_unicode(sys.argv[2])
-	elif str.lower(sys.argv[1]) == '-caser_en':
-		if len(sys.argv) < 4:
-			print '没有偏移量'
-		else:
-			caser_en(sys.argv[2],sys.argv[3])
-	elif str.lower(sys.argv[1]) == '-caser_de':
-		if len(sys.argv) < 4:
-			print '没有偏移量'
-		else:
-			caser_de(sys.argv[2],sys.argv[3])
-	#栅栏密码
-	elif str.lower(sys.argv[1]) == '-fence':
-		fence(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-un_china':
+			unicode_china(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-china_un':
+			china_unicode(sys.argv[2])
+		elif str.lower(sys.argv[1]) == '-caser_en':
+			if len(sys.argv) < 4:
+				print '没有偏移量'
+			else:
+				caser_en(sys.argv[2],sys.argv[3])
+		elif str.lower(sys.argv[1]) == '-caser_de':
+			if len(sys.argv) < 4:
+				print '没有偏移量'
+			else:
+				caser_de(sys.argv[2],sys.argv[3])
+		#栅栏密码
+		elif str.lower(sys.argv[1]) == '-fence':
+			fence(sys.argv[2])
 
-	#摩斯电码
-	elif str.lower(sys.argv[1]) == '-mose':
-		mose_de(sys.argv[2])
+		#摩斯电码
+		elif str.lower(sys.argv[1]) == '-mose':
+			mose_de(sys.argv[2])
 
-	#埃特巴什码
-	elif str.lower(sys.argv[1]) == '-atbash':
-		atbash_de(sys.argv[2])
+		#埃特巴什码
+		elif str.lower(sys.argv[1]) == '-atbash':
+			atbash_de(sys.argv[2])
 
-	#维吉尼亚密码解密
-	elif str.lower(sys.argv[1]) == '-vigener':
-		if len(sys.argv) < 4:
-			print '没有输入有效的值，查看是否输入密钥和密文'
-		else:
-			vigener_de(sys.argv[2],sys.argv[3])
+		#维吉尼亚密码解密
+		elif str.lower(sys.argv[1]) == '-vigener':
+			if len(sys.argv) < 4:
+				print '没有输入有效的值，查看是否输入密钥和密文'
+			else:
+				vigener_de(sys.argv[2],sys.argv[3])
 
-	#维吉尼亚密码加密
-	elif str.lower(sys.argv[1]) == '-vigener_en':
-		if len(sys.argv) < 4:
-			print '没有输入有效的值，查看是否输入密钥和明文'
-		else:
-			vigener_en(sys.argv[2],sys.argv[3])
+		#维吉尼亚密码加密
+		elif str.lower(sys.argv[1]) == '-vigener_en':
+			if len(sys.argv) < 4:
+				print '没有输入有效的值，查看是否输入密钥和明文'
+			else:
+				vigener_en(sys.argv[2],sys.argv[3])
 
-	#培根密码加密
-	elif str.lower(sys.argv[1]) == '-bacon_en':
-		bacon_en(sys.argv[2])
-	#培根密码解密
-	elif str.lower(sys.argv[1]) == '-bacon_de':
-		bacon_de(sys.argv[2])
+		#培根密码加密
+		elif str.lower(sys.argv[1]) == '-bacon_en':
+			bacon_en(sys.argv[2])
+		#培根密码解密
+		elif str.lower(sys.argv[1]) == '-bacon_de':
+			bacon_de(sys.argv[2])
 
-	#ADFGX密码
-	elif str.lower(sys.argv[1]) == '-adfgx_en':
-		if len(sys.argv) < 4:
-			print '没有输入有效的值，查看是否输入密钥和明文'
-		else:
-			adfgx_en(sys.argv[2],sys.argv[3])
+		#ADFGX密码
+		elif str.lower(sys.argv[1]) == '-adfgx_en':
+			if len(sys.argv) < 4:
+				print '没有输入有效的值，查看是否输入密钥和明文'
+			else:
+				adfgx_en(sys.argv[2],sys.argv[3])
 
-	#ADFGX解密
-	elif str.lower(sys.argv[1]) == '-adfgx_de':
-		if len(sys.argv) < 4:
-			print '没有输入有效的值，查看是否输入密钥和密文'
-		else:
-			adfgx_de(sys.argv[2],sys.argv[3])
+		#ADFGX解密
+		elif str.lower(sys.argv[1]) == '-adfgx_de':
+			if len(sys.argv) < 4:
+				print '没有输入有效的值，查看是否输入密钥和密文'
+			else:
+				adfgx_de(sys.argv[2],sys.argv[3])
 
-	#ADFGVX密码
-	elif str.lower(sys.argv[1]) == '-adfgvx_en':
-		if len(sys.argv) < 4:
-			print '没有输入有效的值，查看是否输入密钥和明文'
-		else:
-			adfgvx_en(sys.argv[2],sys.argv[3])
-	#ADFGVX解密
-	elif str.lower(sys.argv[1]) == '-adfgvx_de':
-		if len(sys.argv) < 4:
-			print '没有输入有效的值，查看是否输入密钥和密文'
-		else:
-			adfgvx_de(sys.argv[2],sys.argv[3])
+		#ADFGVX密码
+		elif str.lower(sys.argv[1]) == '-adfgvx_en':
+			if len(sys.argv) < 4:
+				print '没有输入有效的值，查看是否输入密钥和明文'
+			else:
+				adfgvx_en(sys.argv[2],sys.argv[3])
+		#ADFGVX解密
+		elif str.lower(sys.argv[1]) == '-adfgvx_de':
+			if len(sys.argv) < 4:
+				print '没有输入有效的值，查看是否输入密钥和密文'
+			else:
+				adfgvx_de(sys.argv[2],sys.argv[3])
+
+	except:
+		cprint('[*]警告！参数错误！请使用-h参数查看命令帮助','red')
 
 
 
